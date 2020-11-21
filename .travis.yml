@@ -3,7 +3,7 @@ node_js:
   - '12'
 branches:
   only:
-    - master
+    - main
 before_script:
   - npm install -g @nestjs/cli
 script:
@@ -20,7 +20,7 @@ deploy:
     script: bash travis.sh
     skip_cleanup: true
     on:
-      branch: master
+      branch: main
 notifications:
   email:
     on_failure: change
